@@ -22,20 +22,22 @@ artifacts/experiments/{experiment_id}/
 
 ```json
 {
-  "strategy_id": "crypto_trend_4h",
-  "experiment_id": "exp_001",
-  "generated_at": "2026-05-12T10:00:00Z",
+  "schema_version": 1,
+  "strategy_name": "crypto_trend_4h",
+  "dataset_id": "crypto_4h",
   "market": "crypto",
-  "freq": "4h",
+  "generated_at": "2026-05-12T10:00:00Z",
+  "signal_time": "2026-05-12 08:00:00",
+  "horizon": 1,
+  "artifact_uri": "artifacts/experiments/task_001",
   "signals": [
     {
       "instrument": "BTCUSDT",
-      "timestamp": "2026-05-12T08:00:00Z",
+      "action": "buy",
       "score": 0.73,
+      "weight": 0.25,
       "rank": 1,
-      "side": "long",
-      "confidence": 0.68,
-      "target_weight": 0.25
+      "metadata": {}
     }
   ]
 }
