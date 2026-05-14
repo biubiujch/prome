@@ -38,12 +38,11 @@ Choose the package for your operating system, then follow the Quickstart.
 ## Quickstart
 
 ```bash
-prome doctor
-prome datasets list
-prome strategies examples
-prome strategies run examples/crypto_trend_4h.json
-prome experiments list
-prome signals latest --experiment <experiment_id> --format json
+./install.sh
+./bin/prome doctor
+./bin/prome datasets list
+./bin/prome experiments list
+./bin/prome signals latest --json
 ```
 
 ## Documentation

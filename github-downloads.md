@@ -27,3 +27,10 @@ prome-{version}-linux-x64.tar.gz
 prome-{version}-windows-x64.zip
 checksums.txt
 ```
+
+Each platform bundle contains:
+
+- install scripts for the local CLI, API, and Web entrypoints
+- Python workspace wheels plus a pinned `requirements.txt`
+- a Next.js standalone Web bundle
+- public installation and quickstart docs

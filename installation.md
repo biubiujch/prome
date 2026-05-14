@@ -2,6 +2,11 @@
 
 Prome is designed to run locally.
 
+## Runtime Prerequisites
+
+- Python 3.12 or newer
+- Node.js 24 or newer
+
 ## Download A Release
 
 Go to the latest release page:
@@ -21,13 +26,37 @@ Download the archive for your operating system:
 
 Download `checksums.txt` from the same release and verify the package checksum.
 
-## First Run
+## Extract And Install
 
 ```bash
-prome doctor
+tar -xzf prome-{version}-linux-x64.tar.gz
+cd prome-{version}
+./install.sh
 ```
 
-The doctor command checks local paths, data availability, writable artifact directories, and runtime dependencies.
+On Windows, extract `prome-{version}-windows-x64.zip` and run `install.bat`.
+
+## Startup Paths
+
+CLI:
+
+```bash
+./bin/prome doctor
+```
+
+API:
+
+```bash
+./bin/prome-api
+```
+
+Web:
+
+```bash
+PROME_API_BASE_URL=http://127.0.0.1:8000 ./bin/prome-web
+```
+
+The doctor command checks local paths, data availability, writable artifact directories, and runtime dependencies. The Web bundle expects the local API to be reachable through `PROME_API_BASE_URL`.
 
 ## Data
 

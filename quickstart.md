@@ -1,36 +1,42 @@
 # Quickstart
 
-## 1. Check Your Local Setup
+## 1. Install The Bundle
 
 ```bash
-prome doctor
+./install.sh
 ```
 
-## 2. List Available Datasets
+## 2. Check Your Local Setup
 
 ```bash
-prome datasets list
+./bin/prome doctor
 ```
 
-## 3. Run An Example Strategy
+## 3. List Available Datasets
 
 ```bash
-prome strategies examples
-prome strategies run examples/crypto_trend_4h.json
+./bin/prome datasets list
 ```
 
-## 4. Review Experiments
+## 4. Start The Local API And Web Workbench
 
 ```bash
-prome experiments list
-prome experiments show <experiment_id>
+./bin/prome-api
+PROME_API_BASE_URL=http://127.0.0.1:8000 ./bin/prome-web
 ```
 
-## 5. Export Latest Signals
+## 5. Run A Strategy From JSON
 
 ```bash
-prome signals latest --experiment <experiment_id> --format json
-prome export --experiment <experiment_id> --target ./signals
+./bin/prome strategies run ./strategy.json --json
+```
+
+## 6. Review Experiments And Latest Signals
+
+```bash
+./bin/prome experiments list
+./bin/prome signals latest --json
+./bin/prome export experiment <experiment_id> --target ./signals
 ```
 
 The exported signal files can be consumed by your own trading, alerting, or analytics system.
